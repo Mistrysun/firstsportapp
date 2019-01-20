@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FiveDaySplitActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/Five_DaySplit"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="40dp" />
+
+    <Button
+        android:id="@+id/btnMonday"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="@string/Monday"
+        android:textSize="35dp"
+        android:textColor="@color/white"
+        android:background="@drawable/legs"
+        android:fontFamily="cursive"
+        android:textStyle="bold"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/btnTuesday"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="@string/Tuesday"
+        android:textSize="35dp"
+        android:textColor="@color/white"
+        android:background="@drawable/chest"
+        android:fontFamily="cursive"
+        android:textStyle="bold"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/btnWednesday"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="@string/Wednesday"
+        android:textSize="35dp"
+        android:textColor="@color/white"
+        android:background="@drawable/back"
+        android:fontFamily="cursive"
+        android:textStyle="bold"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/btnThursday"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="@string/Thursday"
+        android:textSize="35dp"
+        android:textColor="@color/white"
+        android:background="@drawable/shoulders"
+        android:fontFamily="cursive"
+        android:textStyle="bold"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/btnFriday"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="@string/Friday"
+        android:textSize="35dp"
+        android:textColor="@color/white"
+        android:background="@drawable/arms"
+        android:fontFamily="cursive"
+        android:textStyle="bold"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/btnSaturday"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="@string/Saturday"
+        android:textSize="35dp"
+        android:textColor="@color/white"
+        android:background="@drawable/relax"
+        android:fontFamily="cursive"
+        android:textStyle="bold"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/btnSunday"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="@string/Sunday"
+        android:textSize="35dp"
+        android:textColor="@color/white"
+        android:background="@drawable/chill"
+        android:fontFamily="cursive"
+        android:textStyle="bold"
+        android:layout_weight="1"/>
+
+</LinearLayout>

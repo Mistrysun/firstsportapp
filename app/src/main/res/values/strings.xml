@@ -1,0 +1,38 @@
+<resources>
+    <!-- App name -->
+    <string name="app_name">Spartan</string>
+
+    <!-- Timer -->
+    <string name="start">START</string>
+    <string name="reset">RESET</string>
+
+    <!-- App Activity Titles -->
+    <string name="Five_DaySplit">5 Day-Split</string>
+
+    <!-- Utilised for SixDaySplitActivity -->
+    <string name="Monday_Friday">Monday \u0026 Friday</string>
+    <string name="Tuesday_Saturday">Tuesday \u0026 Saturday</string>
+    <string name="Wednesday_Sunday">Wednesday \u0026 Sunday</string>
+
+    <!-- Utilised for FiveDaySplitActivity -->
+    <string name="Monday">Monday</string>
+    <string name="Tuesday">Tuesday</string>
+    <string name="Wednesday">Wednesday</string>
+    <string name="Thursday">Thursday</string>
+    <string name="Friday">Friday</string>
+    <string name="Saturday">Saturday</string>
+    <string name="Sunday">Sunday</string>
+
+    <!-- Spinner drop down -->
+    <string-array name="StringArray_WaterUnits">
+        <item>litre</item>
+        <item>milliliter</item>
+        <item>cup</item>
+        <item>gallon</item>
+        <item>quart</item>
+        <item>pint</item>
+        <item>tbsp</item>
+        <item>fl oz</item>
+    </string-array>
+
+</resources>

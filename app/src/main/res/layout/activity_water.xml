@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WaterActivity"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Water"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/subTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Target 64 ounces or that's 8 glasses of water per day"
+            android:textSize="10sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textviewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="10dp"
+        android:text="Date: "
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toRightOf="@id/textviewDate"
+        android:hint="DD/MM/YYYY"
+        android:inputType="date" />
+
+    <TextView
+        android:id="@+id/textviewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textviewDate"
+        android:layout_marginTop="25dp"
+        android:text="Time: "
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextDate"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/textviewTime"
+        android:inputType="time"
+        android:hint="00:00"/>
+
+    <TextView
+        android:id="@+id/textviewAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount: "
+        android:textSize="20sp"
+        android:layout_below="@id/textviewTime"
+        android:layout_marginTop="25dp"/>
+
+    <EditText
+        android:id="@+id/editTextAmount"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textviewAmount"
+        android:layout_below="@id/editTextTime"
+        android:layout_marginTop="10dp"
+        android:hint="Enter Amount"/>
+
+    <Spinner
+        android:id="@+id/spinnerUnits"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/editTextTime"
+        android:layout_toRightOf="@id/editTextAmount"
+        android:layout_alignBottom="@id/editTextAmount"
+        android:layout_alignTop="@id/editTextAmount"
+        android:backgroundTint="@color/gray"
+        android:spinnerMode="dropdown">
+    </Spinner>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextAmount"
+        android:layout_toRightOf="@id/editTextAmount"
+        android:onClick="clickFunction"
+        android:text="Add" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_water"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
