@@ -7,6 +7,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/superset"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:textStyle="italic|bold"/>
+
     <Button
         android:id="@+id/startButton"
         android:layout_width="match_parent"
@@ -17,15 +25,15 @@
         android:textSize="50sp"/>
 
     <TextView
-    android:id="@+id/counterTextView"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingTop="40dp"
-    android:paddingBottom="40dp"
-    android:textAlignment="center"
-    android:text="40"
-    android:textSize="60sp"
-    android:layout_gravity="center"/>
+        android:id="@+id/counterTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp"
+        android:textAlignment="center"
+        android:text="40"
+        android:textSize="60sp"
+        android:layout_gravity="center"/>
 
     <TextView
         android:id="@+id/counterTextView2"
@@ -41,7 +49,7 @@
     <Button
         android:id="@+id/resetButton"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="150dp"
         android:layout_marginBottom="8dp"
         android:text="@string/reset"
         android:textSize="50sp"/>

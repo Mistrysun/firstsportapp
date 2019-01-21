@@ -1,5 +1,6 @@
 package com.example.android.firstsportapp;
 
+import android.media.MediaPlayer;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,13 +15,15 @@ public class TimerActivity extends AppCompatActivity {
     private boolean isCanceled = false;
     private boolean fortySecondsComplete = false;
 
-    //Declare a variable to hold CountDownTimer remaining time
-    long timeRemaining = 0;
+    MediaPlayer mediaPlayer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timer);
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.boxing_bell_short);
 
         final Button btnStart = (Button) findViewById(R.id.startButton);
         final Button btnReset = (Button) findViewById(R.id.resetButton);
@@ -38,7 +41,7 @@ public class TimerActivity extends AppCompatActivity {
 
 
                 //Initialise a new CountDownTimer instance
-                new CountDownTimer(41000, 1000){
+                new CountDownTimer(10000, 1000){
                     public void onTick(long millisUntilFinished) {
                         //determine if timer is cancelled
                         if (isCanceled) {
@@ -51,21 +54,21 @@ public class TimerActivity extends AppCompatActivity {
                             //1 second = 1000 milliseconds
                             viewTimer2.setText("C'mon!");
                             viewTimer.setText(String.valueOf(millisUntilFinished / 1000));
-                            //Put count down timer remaining in a variable
-                            timeRemaining = millisUntilFinished;
+
+                            //Triggers the next countdown timer
+                            fortySecondsComplete = true;
                             }
                         }
 
                     public void onFinish(){
+
                         //Enable the start button
                         btnStart.setEnabled(true);
                         viewTimer2.setText("Reset!");
 
-                        //Next if statement starts 20 sec countdown
-                        fortySecondsComplete = true;
-
                         if (fortySecondsComplete) {
-                            new CountDownTimer(21000,1000) {
+                            mediaPlayer.start();
+                            new CountDownTimer(31000,1000) {
 
                                 @Override
                                 public void onTick(long millisUntilFinished2) {
@@ -79,8 +82,6 @@ public class TimerActivity extends AppCompatActivity {
                                         //Display the remaining seconds to app interface
                                         //1 second = 1000 milliseconds
                                         viewTimer2.setText(String.valueOf(millisUntilFinished2 / 1000));
-                                        //Put count down timer remaining in a variable
-                                        timeRemaining = millisUntilFinished2;
                                     }
                                 }
 
