@@ -6,6 +6,8 @@
     <string name="start">START</string>
     <string name="reset">RESET</string>
     <string name="superset">~ Super Set ~</string>
+    <string name="forty">40</string>
+    <string name="thirty">30</string>
 
     <!-- App Activity Titles -->
     <string name="Five_DaySplit">5 Day-Split</string>

@@ -32,7 +32,7 @@ public class TimerActivity extends AppCompatActivity {
 
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(final View view) {
                 isCanceled = false;
 
                 if (btnStart.isEnabled()) {
@@ -41,7 +41,7 @@ public class TimerActivity extends AppCompatActivity {
 
 
                 //Initialise a new CountDownTimer instance
-                new CountDownTimer(10000, 1000){
+                new CountDownTimer(41000, 1000){
                     public void onTick(long millisUntilFinished) {
                         //determine if timer is cancelled
                         if (isCanceled) {
@@ -55,9 +55,9 @@ public class TimerActivity extends AppCompatActivity {
                             viewTimer2.setText("C'mon!");
                             viewTimer.setText(String.valueOf(millisUntilFinished / 1000));
 
-                            //Triggers the next countdown timer
-                            fortySecondsComplete = true;
                             }
+                        //Triggers the next countdown timer
+                        fortySecondsComplete = true;
                         }
 
                     public void onFinish(){
@@ -112,7 +112,7 @@ public class TimerActivity extends AppCompatActivity {
 
                 //Notify the user that CountDownTimer is canceled/stopped
                 viewTimer.setText("40");
-                viewTimer2.setText("20");
+                viewTimer2.setText("30");
             }
         });
 

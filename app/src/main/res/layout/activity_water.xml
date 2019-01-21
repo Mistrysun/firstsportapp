@@ -108,13 +108,67 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextAmount"
         android:layout_toRightOf="@id/editTextAmount"
-        android:onClick="clickFunction"
+        android:onClick="storeWaterOnClick"
         android:text="Add" />
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/background_water"
-        android:layout_alignParentBottom="true"/>
+        android:id="@+id/water1ImageView"
+        android:layout_width="362dp"
+        android:layout_height="542dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/w_one"
+        android:scaleType="fitCenter"
+        android:alpha="1"/>
+
+    <ImageView
+        android:id="@+id/water2ImageView"
+        android:layout_width="362dp"
+        android:layout_height="542dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/w_two"
+        android:scaleType="fitCenter"
+        android:alpha="0"/>
+
+    <ImageView
+        android:id="@+id/water3ImageView"
+        android:layout_width="362dp"
+        android:layout_height="542dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/w_three"
+        android:scaleType="fitCenter"
+        android:alpha="0"/>
+
+    <ImageView
+        android:id="@+id/water4ImageView"
+        android:layout_width="362dp"
+        android:layout_height="542dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/w_four"
+        android:scaleType="fitCenter"
+        android:alpha="0"/>
+
+    <ImageView
+        android:id="@+id/water5ImageView"
+        android:layout_width="362dp"
+        android:layout_height="542dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/w_five"
+        android:scaleType="fitCenter"
+        android:alpha="0"/>
+
+    <ImageView
+        android:id="@+id/water6ImageView"
+        android:layout_width="362dp"
+        android:layout_height="542dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/w_six"
+        android:scaleType="fitCenter"
+        android:alpha="0"/>
 
 </RelativeLayout>

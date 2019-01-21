@@ -29,9 +29,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="40dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
         android:paddingBottom="40dp"
         android:textAlignment="center"
-        android:text="40"
+        android:text="@string/forty"
         android:textSize="60sp"
         android:layout_gravity="center"/>
 
@@ -42,7 +44,7 @@
         android:paddingTop="40dp"
         android:paddingBottom="40dp"
         android:textAlignment="center"
-        android:text="20"
+        android:text="@string/thirty"
         android:textSize="60sp"
         android:layout_gravity="center"/>
 
