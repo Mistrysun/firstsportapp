@@ -10,7 +10,8 @@
     android:id="@+id/tileLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:baselineAligned="false">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,21 +24,21 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:text="Routines"
-            android:textSize="30dp"/>
+            android:textSize="30sp"/>
 
         <Button
             android:id="@+id/btnWorkouts"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:text="Workouts"
-            android:textSize="30dp"/>
+            android:textSize="30sp"/>
 
         <Button
             android:id="@+id/btnLog"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:text="Log"
-            android:textSize="30dp"/>
+            android:textSize="30sp"/>
 
     </LinearLayout>
 
@@ -52,21 +53,21 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:text="Food Diary"
-            android:textSize="30dp"/>
+            android:textSize="30sp"/>
 
         <Button
             android:id="@+id/btnWater"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:text="Water"
-            android:textSize="30dp"/>
+            android:text="@string/Water"
+            android:textSize="30sp"/>
 
         <Button
             android:id="@+id/btnScience"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:text="Science"
-            android:textSize="30dp"/>
+            android:text="@string/Science"
+            android:textSize="30sp"/>
 
     </LinearLayout>
 
@@ -78,7 +79,7 @@
         android:layout_height="210dp"
         android:layout_below="@+id/tileLayout"
         android:text="Timer"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:backgroundTint="@color/teal" />
 
     <Button
@@ -86,7 +87,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnTimer"
-        android:text="Logout"
+        android:text="@string/logOut"
         android:textSize="25sp"
         android:backgroundTint="@color/red"
         android:layout_alignParentBottom="true"/>

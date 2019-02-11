@@ -2,6 +2,11 @@
     <!-- App name -->
     <string name="app_name">Spartan</string>
 
+    <!-- Main -->
+    <string name="logOut">LogOut</string>
+    <string name="Science">Science</string>
+    <string name="Water">Water</string>
+
     <!-- Timer -->
     <string name="start">START</string>
     <string name="reset">RESET</string>
