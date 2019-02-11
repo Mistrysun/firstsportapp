@@ -4,6 +4,7 @@ import android.media.MediaPlayer;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
@@ -18,6 +19,7 @@ public class TimerActivity extends AppCompatActivity {
     TextView workTimerTextView;
     TextView restTimerTextView;
     Button startButton;
+    int workResetValue, restResetValue;
 
     boolean restTimer = false;
 
@@ -27,11 +29,16 @@ public class TimerActivity extends AppCompatActivity {
 
     MediaPlayer mediaPlayer;
 
-    public void resetTimers() {
+    public void InitialiseTimers() {
         workTimerTextView.setText("0:60");
         workSeekBar.setProgress(60);
         restTimerTextView.setText("1:00");
         restSeekBar.setProgress(40);
+    }
+
+    public void resetTimers() {
+        updateTimer(workResetValue);
+        updateTimer2(restResetValue);
     }
 
 
@@ -49,18 +56,16 @@ public class TimerActivity extends AppCompatActivity {
         workTimerTextView = (TextView) findViewById(R.id.counterTextView);
         restTimerTextView = (TextView) findViewById(R.id.counterTextView2);
 
-        workSeekBar.setMax(60);
+        workSeekBar.setMax(90);
         restSeekBar.setMax(90);
 
-        resetTimers();
-
-
-        final Button btnReset = (Button) findViewById(R.id.resetButton);
+        InitialiseTimers();
 
         workSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 updateTimer(i);
+                workResetValue = i;
 
             }
 
@@ -79,6 +84,7 @@ public class TimerActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 updateTimer2(i);
+                restResetValue = i;
 
             }
 
@@ -124,8 +130,7 @@ public class TimerActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                //Enable the start button
-                startButton.setEnabled(true);
+
                 restTimerTextView.setText("Reset!");
 
                 if (restTimer) {
@@ -164,11 +169,8 @@ public class TimerActivity extends AppCompatActivity {
 
         //Enable the start button
         startButton.setEnabled(true);
-
         resetTimers();
     }
-
-
 
     public void updateTimer(int secondsLeft) {
         //Int will round down number in mins and store in variable
