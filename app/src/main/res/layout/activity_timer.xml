@@ -19,6 +19,7 @@
         android:textAlignment="center"
         android:textSize="50sp"
         android:textStyle="italic|bold"
+        app:layout_constraintBottom_toTopOf="@+id/startButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,21 +27,39 @@
     <Button
         android:id="@+id/startButton"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="151dp"
         android:layout_gravity="center"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="16dp"
         android:onClick="StartButtonClicked"
         android:text="@string/start"
         android:textAlignment="center"
         android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/workOutDurationTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/workOutDurationTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/workOutDuration"
+        android:textAlignment="center"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/workSeekBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title" />
+        app:layout_constraintTop_toBottomOf="@+id/startButton" />
 
     <SeekBar
         android:id="@+id/workSeekBar"
@@ -48,13 +67,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         app:layout_constraintBottom_toTopOf="@+id/counterTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/startButton" />
+        app:layout_constraintTop_toBottomOf="@+id/workOutDurationTextView" />
 
     <TextView
         android:id="@+id/counterTextView"
@@ -63,17 +81,34 @@
         android:layout_gravity="center"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="@string/forty"
+        android:layout_marginBottom="32dp"
+        android:text="@string/sixtySec"
         android:textAlignment="center"
         android:textSize="60sp"
-        app:layout_constraintBottom_toTopOf="@id/restSeekBar"
+        app:layout_constraintBottom_toTopOf="@+id/restDurationTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/workSeekBar" />
+        app:layout_constraintTop_toBottomOf="@+id/workSeekBar" />
+
+    <TextView
+        android:id="@+id/restDurationTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/restDuration"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/restSeekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/counterTextView" />
 
     <SeekBar
         android:id="@+id/restSeekBar"
@@ -81,13 +116,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        app:layout_constraintBottom_toTopOf="@id/counterTextView2"
+        app:layout_constraintBottom_toTopOf="@+id/counterTextView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/counterTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/restDurationTextView" />
 
     <TextView
         android:id="@+id/counterTextView2"
@@ -96,36 +130,33 @@
         android:layout_gravity="center"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="24dp"
-        android:text="@string/thirty"
+        android:layout_marginBottom="16dp"
+        android:text="@string/oneMin"
         android:textAlignment="center"
         android:textSize="60sp"
         app:layout_constraintBottom_toTopOf="@+id/resetButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/restSeekBar" />
 
     <Button
         android:id="@+id/resetButton"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="176dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
+        android:onClick="ResetButtonClicked"
         android:text="@string/reset"
         android:textSize="50sp"
-        android:onClick="ResetButtonClicked"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/counterTextView2" />
-
 
 
 </android.support.constraint.ConstraintLayout>

@@ -37,8 +37,8 @@ public class TimerActivity extends AppCompatActivity {
     }
 
     public void resetTimers() {
-        updateTimer(workResetValue);
-        updateTimer2(restResetValue);
+        updateTimer(workResetValue, workTimerTextView);
+        updateTimer(restResetValue, restTimerTextView);
     }
 
 
@@ -64,7 +64,7 @@ public class TimerActivity extends AppCompatActivity {
         workSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                updateTimer(i);
+                updateTimer(i, workTimerTextView);
                 workResetValue = i;
 
             }
@@ -83,7 +83,7 @@ public class TimerActivity extends AppCompatActivity {
         restSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                updateTimer2(i);
+                updateTimer(i, restTimerTextView);
                 restResetValue = i;
 
             }
@@ -120,7 +120,7 @@ public class TimerActivity extends AppCompatActivity {
                 } else {
                     //Display the remaining seconds to app interface
                     //1 second = 1000 milliseconds
-                    updateTimer((int) millisUntilFinished / 1000);
+                    updateTimer((int) millisUntilFinished / 1000, workTimerTextView);
                     restTimerTextView.setText("C'mon!");
 
                 }
@@ -147,7 +147,7 @@ public class TimerActivity extends AppCompatActivity {
 
                                 //Display the remaining seconds to app interface
                                 //1 second = 1000 milliseconds
-                                updateTimer2((int) millisUntilFinished2 / 1000);
+                                updateTimer((int) millisUntilFinished2 / 1000, restTimerTextView);
                                 workTimerTextView.setText("Rest!");
                             }
                         }
@@ -172,7 +172,7 @@ public class TimerActivity extends AppCompatActivity {
         resetTimers();
     }
 
-    public void updateTimer(int secondsLeft) {
+    public void updateTimer(int secondsLeft, TextView textView) {
         //Int will round down number in mins and store in variable
         int minutes = secondsLeft / 60;
         //so int seconds will do calculations and store the remainder in second
@@ -184,21 +184,6 @@ public class TimerActivity extends AppCompatActivity {
             secondString = "0" + secondString;
         }
 
-        workTimerTextView.setText(Integer.toString(minutes) + ":" + secondString);
-    }
-
-    public void updateTimer2(int secondsLeft) {
-        //Int will round down number in mins and store in variable
-        int minutes = secondsLeft / 60;
-        //so int seconds will do calculations and store the remainder in second
-        int seconds = secondsLeft - (minutes * 60);
-
-        String secondString = Integer.toString(seconds);
-
-        if (seconds <= 9) {
-            secondString = "0" + secondString;
-        }
-
-        restTimerTextView.setText(Integer.toString(minutes) + ":" + secondString);
+        textView.setText(Integer.toString(minutes) + ":" + secondString);
     }
 }
